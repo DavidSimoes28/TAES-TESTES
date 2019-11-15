@@ -52,15 +52,13 @@ class CheckLoginPage {
 	 */
 	@Given("I am at the dashboard")
 	def Check_Dashboard_Page() {
-		
 	}
 
-	@When("I click the {string} button")
-	def I_check_the_login_page(String name) {
-		
+	@When("I click the login button")
+	def I_check_the_login_button_dashboard() {
 	}
 
-	@Then("I can see the {string} page")
-	def Check_Login_Page(String name) {
+	@Then("I am at the login page")
+	def Check_Login_Page() {
 	}
 }
