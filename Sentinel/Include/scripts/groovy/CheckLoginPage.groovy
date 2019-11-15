@@ -54,8 +54,8 @@ class CheckLoginPage {
 	def Check_Dashboard_Page() {
 	}
 
-	@When("I click the login button")
-	def I_check_the_login_button_dashboard() {
+	@When("I click the {string} button")
+	def I_check_the_login_button_dashboard(String name) {
 	}
 
 	@Then("I am at the login page")
