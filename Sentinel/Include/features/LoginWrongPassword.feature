@@ -22,11 +22,7 @@ Feature: Login with a wrong password
   So that i can try to Login with an account with the wrong password
 
   Scenario Outline: Try to login with wrong password
-   Given I am at the dashboard
-
-   And I click the login button
-
-   Then I am at the login page
+   Given I am at the login page
 
    And I insert "123@mail.com" in the email field
 
