@@ -50,16 +50,13 @@ class LoginUnregisteredAccount {
 
 	@And("I insert {string} in the email field")
 	def Insert_Email(String email) {
-		println name
 	}
 
 	@When("I insert {string} in the password field")
 	def I_insert(int value) {
-		println value
 	}
 
-	@Then("I click in the login button")
-	def I_click_login_button_login() {
-		println status
+	@Then("I click in the {string} button")
+	def I_click_button_in_login_page(String name) {
 	}
 }
