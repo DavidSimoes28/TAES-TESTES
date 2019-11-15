@@ -53,7 +53,7 @@ class LoginUnregisteredAccount {
 	}
 
 	@When("I insert {string} in the password field")
-	def I_insert(int value) {
+	def I_insert(String name) {
 	}
 
 	@Then("I click in the {string} button")
