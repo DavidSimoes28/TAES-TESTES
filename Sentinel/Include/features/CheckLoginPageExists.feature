@@ -23,5 +23,5 @@ Feature: See Login Page
 
   Scenario: See Login Page
 		Given I am at the dashboard
-		When I click the "login" button
+		When I click the "LOGIN" button
 		Then I am at the login page

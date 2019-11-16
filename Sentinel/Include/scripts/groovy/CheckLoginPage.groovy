@@ -52,13 +52,19 @@ class CheckLoginPage {
 	 */
 	@Given("I am at the dashboard")
 	def Check_Dashboard_Page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+				true)
 	}
 
 	@When("I click the {string} button")
-	def I_check_the_login_button_dashboard(String name) {
+	def I_click_the_login_button_dashboard(String name) {
+		Mobile.tap(findTestObject('AT2/android.widget.Button0 - ' + name), 0)
 	}
 
 	@Then("I am at the login page")
 	def Check_Login_Page() {
+		Mobile.verifyElementExist(findTestObject('AT2/android.widget.FrameLayout0'), 0)
+
+		Mobile.closeApplication()
 	}
 }

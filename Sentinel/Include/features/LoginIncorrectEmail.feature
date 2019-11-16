@@ -27,4 +27,4 @@ Feature: Login Incorrect Email
 		Given I am at the login page
 		And I insert "qwerty" in the email field
 		And I insert "123123" password field
-		Then I click in the "login" button
+		Then I click in the "LOGIN" button

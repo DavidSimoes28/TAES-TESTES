@@ -28,4 +28,4 @@ Feature: Login with a wrong password
 
    And I insert "123" in the password field
 
-   Then I click in the "login" button
+   Then I click in the "LOGIN" button

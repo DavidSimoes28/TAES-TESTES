@@ -22,6 +22,7 @@ Feature: Login with an unregistered account
   So that i can Login with an unregistered account
 
   Scenario: Login with an unregistered account
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+  	Given I am at the login page
+		And I insert "qwerty@mail.com" in the email field
+		And I insert "123123" in the password field
+		Then I click in the "LOGIN" button
