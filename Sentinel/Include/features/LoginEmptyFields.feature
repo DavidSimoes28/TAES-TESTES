@@ -24,5 +24,5 @@ Feature: Login Empty Fields
 
   @tag1
   Scenario Outline: Login with empty fields
-		Given I am at the login page
+		Given I am in the login page
 		Then I click in the "LOGIN" button

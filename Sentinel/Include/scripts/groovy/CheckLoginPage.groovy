@@ -52,7 +52,7 @@ class CheckLoginPage {
 	 */
 	@Given("I am at the dashboard")
 	def Check_Dashboard_Page() {
-		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
 				true)
 	}
 

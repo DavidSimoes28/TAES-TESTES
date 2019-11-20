@@ -21,8 +21,9 @@ Feature: Login with a wrong password
   I want to click the Login button
   So that i can try to Login with an account with the wrong password
 
-  Scenario Outline: Try to login with wrong password
-   Given I am at the login page
+  Scenario: Try to login with wrong password
+  
+   Given I am in the login page
 
    And I insert "123@mail.com" in the email field
 

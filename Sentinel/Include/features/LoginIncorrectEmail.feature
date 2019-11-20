@@ -16,15 +16,15 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+
 Feature: Login Incorrect Email
   As a user 
   I want to click the Login button
   So that i can try to Login with an account with the incorrect email
 
-  @tag1
-  Scenario Outline: Login with Incorrect Email
-		Given I am at the login page
+
+  Scenario: Login with Incorrect Email
+		Given I am in the login page
 		And I insert "qwerty" in the email field
-		And I insert "123123" password field
+		And I insert "123123" in the password field
 		Then I click in the "LOGIN" button

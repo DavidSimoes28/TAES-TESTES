@@ -48,11 +48,18 @@ import cucumber.api.java.en.When
 
 class LoginUnregisteredAccount {
 
+	@Given("I am in the login page")
+	def At_Login_Page() {
+		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+				true)
+
+		Mobile.tap(findTestObject('AT2/android.widget.Button0 - LOGIN'), 0)
+		Mobile.verifyElementExist(findTestObject('AT2/android.widget.FrameLayout0'), 0)
+	}
 	@And("I insert {string} in the email field")
 	def Insert_Email(String email) {
-		
-		Mobile.setText(findTestObject('AT2/android.widget.EditText0'), email, 0)	
 
+		Mobile.setText(findTestObject('AT2/android.widget.EditText0'), email, 0)
 	}
 
 	@When("I insert {string} in the password field")
@@ -62,9 +69,9 @@ class LoginUnregisteredAccount {
 
 	@Then("I click in the {string} button")
 	def I_click_button_in_login_page(String name) {
-		
+
 		Mobile.tap(findTestObject('AT2/android.widget.Button0 - ' + name + ' (1)'), 0)
-		
+
 		Mobile.closeApplication()
 	}
 }

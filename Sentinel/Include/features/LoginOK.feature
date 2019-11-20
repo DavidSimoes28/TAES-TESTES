@@ -22,8 +22,8 @@ Feature: Login Correctly
   So that i can Login
 
 
-  Scenario Outline: Login with account
-Given I am at the login page
+  Scenario: Login with account
+Given I am in the login page
 
 And I insert "123@mail.com" in the email field
 

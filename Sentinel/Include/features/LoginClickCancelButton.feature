@@ -25,7 +25,7 @@ Feature: Login click Cancel button
 
   @tag1
   Scenario Outline: Click cancel button on Login page
-		Given I am at the login page
+		Given I am in the login page
 		And I click in the "cancel" button
 		Then I am at the dashboard
 
