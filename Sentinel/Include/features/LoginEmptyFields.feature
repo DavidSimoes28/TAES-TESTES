@@ -16,13 +16,13 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+
 Feature: Login Empty Fields
   As a user 
   I want to click the Login button
   So that i can try to Login without filling the Fields
 
-  @tag1
-  Scenario Outline: Login with empty fields
+
+  Scenario: Login with empty fields
 		Given I am in the login page
 		Then I click in the "LOGIN" button

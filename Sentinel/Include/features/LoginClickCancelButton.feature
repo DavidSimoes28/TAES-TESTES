@@ -16,17 +16,16 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+
 Feature: Login click Cancel button
   As a user 
   I want to click the Cancel button
   So that i can go back to the Dashboard
 
 
-  @tag1
-  Scenario Outline: Click cancel button on Login page
+  Scenario: Click cancel button on Login page
 		Given I am in the login page
-		And I click in the "cancel" button
-		Then I am at the dashboard
+		And I click on the "CANCELAR" button
+		Then I return back to the dashboard
 
  

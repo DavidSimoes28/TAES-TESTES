@@ -29,6 +29,4 @@ And I insert "123@mail.com" in the email field
 
 And I insert "123123" in the password field
 
-And I click in the "LOGIN" button
-
-Then open the Dashboard for authenticated users
+Then I click in the "LOGIN" button

@@ -50,7 +50,7 @@ class LoginUnregisteredAccount {
 
 	@Given("I am in the login page")
 	def At_Login_Page() {
-		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
 				true)
 
 		Mobile.tap(findTestObject('AT2/android.widget.Button0 - LOGIN'), 0)
@@ -67,6 +67,14 @@ class LoginUnregisteredAccount {
 		Mobile.setText(findTestObject('AT2/android.widget.EditText0 (1)'), name, 0)
 	}
 
+	@Then("I click on the {string} button")
+	def I_click_cancel_button_in_login_page(String name) {
+
+		Mobile.tap(findTestObject('AT2/android.widget.Button0 - ' + name ), 0)
+
+		Mobile.closeApplication()
+	}
+
 	@Then("I click in the {string} button")
 	def I_click_button_in_login_page(String name) {
 
@@ -74,4 +82,5 @@ class LoginUnregisteredAccount {
 
 		Mobile.closeApplication()
 	}
+
 }

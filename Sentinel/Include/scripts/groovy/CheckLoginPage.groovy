@@ -52,7 +52,7 @@ class CheckLoginPage {
 	 */
 	@Given("I am at the dashboard")
 	def Check_Dashboard_Page() {
-		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
 				true)
 	}
 
@@ -65,6 +65,13 @@ class CheckLoginPage {
 	def Check_Login_Page() {
 		Mobile.verifyElementExist(findTestObject('AT2/android.widget.FrameLayout0'), 0)
 
+		Mobile.closeApplication()
+	}
+	
+	@Then("I return back to the dashboard")
+	def I_return_back_to_the_dashboard() {
+
+		
 		Mobile.closeApplication()
 	}
 }
