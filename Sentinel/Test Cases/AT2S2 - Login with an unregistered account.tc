@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AT2S2 - Login with an unregistered account</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d8fa0189-5d24-4aad-a126-4d93b70fc33d</testCaseGuid>
+</TestCaseEntity>
