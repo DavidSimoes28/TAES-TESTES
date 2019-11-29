@@ -35,7 +35,11 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>1573847378009</id>
+=======
+			<id>1574874559697</id>
+>>>>>>> afbcc08fad45727b035d51fed1f0df966f6f6713
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -44,6 +48,7 @@
 			</matcher>
 		</filter>
 		<filter>
+<<<<<<< HEAD
 			<id>1573847378017</id>
 			<name></name>
 			<type>6</type>
@@ -81,6 +86,9 @@
 		</filter>
 		<filter>
 			<id>1574866938338</id>
+=======
+			<id>1574874559707</id>
+>>>>>>> afbcc08fad45727b035d51fed1f0df966f6f6713
 			<name></name>
 			<type>6</type>
 			<matcher>
