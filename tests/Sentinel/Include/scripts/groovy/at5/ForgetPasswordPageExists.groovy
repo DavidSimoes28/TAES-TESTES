@@ -52,17 +52,7 @@ class ForgetPasswordPageExists {
 	@Given("I am at the forget pasword page")
 	def I_am_at_the_forget_pasword_page() {
 		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', true)
-		Mobile.tapAndHold(findTestObject('at5/android.widget.Button0 - LOGIN'), 0, 0)
-		Mobile.tap(findTestObject('at5/android.widget.TextView0 - Forget Password'), 0)
-	}
-
-	@And("i can see if the email field exists")
-	def If_email_field_exists() {
-		Mobile.verifyElementExist(findTestObject('at5/android.widget.EditText0'), 0)
-	}
-	
-	@Then("i can see if the {string} button exists")
-	def If_send_email_button_exists(String string) {
-		Mobile.verifyElementExist(findTestObject('at5/android.widget.Button0 - '+string), 0)
+		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
+		Mobile.tap(findTestObject('EditText - Forget Password'), 0)
 	}
 }

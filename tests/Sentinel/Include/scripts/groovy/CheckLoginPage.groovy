@@ -1,4 +1,3 @@
-package at5
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,5 +46,29 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class ResetPasswordExists {
+class CheckLoginPage {
+	/**
+	 * The step definitions below match with Katalon sample Gherkin steps
+	 */
+	@Given("I am at the dashboard")
+	def Check_Dashboard_Page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+				true)
+	}
+
+	@When("I click in the {string} button")
+	def I_click_the_login_button_dashboard(String name) {
+		Mobile.tap(findTestObject('Button - ' + name), 0)
+	}
+
+	@Then("I am at the {string}")
+	def Check_Login_Page(String string) {
+		Mobile.verifyElementExist(findTestObject('FrameLayout - ' + string), 0)
+		Mobile.closeApplication()
+	}
+
+	@Then("I return back to the dashboard")
+	def I_return_back_to_the_dashboard() {
+		Mobile.closeApplication()
+	}
 }

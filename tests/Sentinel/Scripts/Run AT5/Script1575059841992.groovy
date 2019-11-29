@@ -15,18 +15,5 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', 
-    true)
-
-Mobile.tapAndHold(findTestObject('at5/android.widget.Button0 - LOGIN'), 0, 0)
-
-Mobile.tap(findTestObject('at5/TextView - Forget Password'), 0)
-
-Mobile.verifyElementExist(findTestObject('EditText - Email Forget Password'), 0)
-
-Mobile.setText(findTestObject('EditText - Email Forget Password'), 'davidsimoes100@gmail.com', 0)
-
-Mobile.verifyElementExist(findTestObject('Button - Send Email'), 0)
-
-Mobile.closeApplication()
+CucumberKW.runFeatureFolder('Include/features/at5')
 

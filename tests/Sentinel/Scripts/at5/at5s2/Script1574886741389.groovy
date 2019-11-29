@@ -20,11 +20,11 @@ Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app
 
 Mobile.tapAndHold(findTestObject('at5/android.widget.Button0 - LOGIN'), 0, 0)
 
-Mobile.tap(findTestObject('at5/android.widget.TextView0 - Forget Password'), 0)
+Mobile.tap(findTestObject('at5/TextView - Forget Password'), 0)
 
-Mobile.setText(findTestObject('at5/android.widget.EditText0'), 'davidsimoes100@gmail.com', 0)
+Mobile.setText(findTestObject('EditText - Email Forget Password'), 'davidsimoes100@gmail.com', 0)
 
-Mobile.tap(findTestObject('at5/android.widget.Button0 - SEND EMAIL TO RESET PASSWORD'), 0)
+Mobile.tap(findTestObject('Button - Send Email'), 0)
 
 Mobile.closeApplication()
 

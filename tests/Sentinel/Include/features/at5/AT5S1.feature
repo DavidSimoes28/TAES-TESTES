@@ -5,5 +5,5 @@ Feature: Forget password
 	So I can login
 
   Scenario: Reset password exists
-    Given I am at the login page
-    Then i can see if the "Forget Password" field exists
+    Given I am in the login page
+    Then I can see if the "Forget Password" field exists
