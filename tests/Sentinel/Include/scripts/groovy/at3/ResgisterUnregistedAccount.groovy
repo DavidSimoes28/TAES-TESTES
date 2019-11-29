@@ -48,34 +48,4 @@ import cucumber.api.java.en.When
 
 
 class ResgisterUnregistedAccount {
-	
-	@And("i insert {string} in the email field")
-	def Insert_Email(String email) {
-
-		Mobile.setText(findTestObject('at3/android.widget.EditText0'), email, 0)
-	}
-
-	@When("i insert {string} in the password field")
-	def I_insert(String name) {
-		Mobile.setText(findTestObject('at3/android.widget.EditText0 (1)'), name, 0)
-	}
-	
-	@And("i insert {string} in the password confirmation field")
-	def I_insert_conf_pass(String name) {
-		Mobile.setText(findTestObject('at3/android.widget.EditText0 (2)'), name, 0)
-	}
-
-
-	@Then("i click in the {string} button")
-	def I_click_button_in_login_page(String name) {
-
-		Mobile.tap(findTestObject('at3/android.widget.Button0 - ' + name), 0)
-
-		Mobile.closeApplication()
-	}
-	
-	@Then("I am at the dashboard")
-	def I_at_the_dashboard() {
-		Mobile.closeApplication()
-	}
 }

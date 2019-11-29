@@ -5,7 +5,7 @@ Feature: Register in application
 
   Scenario: Register page field exist
     Given I am at the register page
-		And i insert "123@mail.com" in the email field
-		And i insert "123123" in the password field
-		And i insert "123123" in the password confirmation field
-		Then i click in the "REGISTER (1)" button
+		And I insert "123@mail.com" in the "Email Register" field
+		And I insert "123123" in the "Password Register" field
+		And I insert "123123" in the "Password Confirmation" field
+		Then I click in the "Register Register" button

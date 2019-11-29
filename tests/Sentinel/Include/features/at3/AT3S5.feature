@@ -5,4 +5,4 @@ Feature: Register in application
 
   Scenario: Register with empty fields
     Given I am at the register page
-		Then i click in the "REGISTER (1)" button
+		Then I click in the "Register Register" button
