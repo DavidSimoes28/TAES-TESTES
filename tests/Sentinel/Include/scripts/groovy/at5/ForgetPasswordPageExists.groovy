@@ -1,4 +1,4 @@
-package at3
+package at5
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,5 +47,12 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class ResgisterUnregistedAccount {
+class ForgetPasswordPageExists {
+
+	@Given("I am at the forget pasword page")
+	def I_am_at_the_forget_pasword_page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', true)
+		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
+		Mobile.tap(findTestObject('EditText - Forget Password'), 0)
+	}
 }

@@ -1,4 +1,3 @@
-package at3
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,5 +46,24 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class ResgisterUnregistedAccount {
+class LoginUnregisteredAccount {
+
+	@Given("I am in the login page")
+	def At_Login_Page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+				true)
+
+		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
+		Mobile.verifyElementExist(findTestObject('FrameLayout - Login Page'), 0)
+	}
+	@And("I insert {string} in the email field")
+	def Insert_Email(String email) {
+
+		Mobile.setText(findTestObject('AT2/android.widget.EditText0'), email, 0)
+	}
+
+	@When("I insert {string} in the {string} field")
+	def I_insert(String name,String string) {
+		Mobile.setText(findTestObject('EditText - '+ string), name, 0)
+	}
 }

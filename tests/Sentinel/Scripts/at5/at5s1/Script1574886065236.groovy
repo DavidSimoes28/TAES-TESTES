@@ -18,15 +18,15 @@ import internal.GlobalVariable as GlobalVariable
 Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', 
     true)
 
-Mobile.tap(findTestObject('Button - Register Dashboard'), 0)
+Mobile.tapAndHold(findTestObject('at5/android.widget.Button0 - LOGIN'), 0, 0)
 
-Mobile.setText(findTestObject('EditText - Email Register'), '123@mail.com', 0)
+Mobile.tap(findTestObject('at5/TextView - Forget Password'), 0)
 
-Mobile.setText(findTestObject('EditText - Password Register'), '123123', 0)
+Mobile.verifyElementExist(findTestObject('EditText - Email Forget Password'), 0)
 
-Mobile.setText(findTestObject('EditText - Password Confirmation'), '123123', 0)
+Mobile.setText(findTestObject('EditText - Email Forget Password'), 'davidsimoes100@gmail.com', 0)
 
-Mobile.tap(findTestObject('Button - Register Register'), 0)
+Mobile.verifyElementExist(findTestObject('Button - Send Email'), 0)
 
 Mobile.closeApplication()
 

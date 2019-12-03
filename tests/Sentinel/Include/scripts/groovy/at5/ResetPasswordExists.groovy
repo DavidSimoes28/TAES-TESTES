@@ -1,4 +1,4 @@
-package at3
+package at5
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,5 +47,5 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class ResgisterUnregistedAccount {
+class ResetPasswordExists {
 }

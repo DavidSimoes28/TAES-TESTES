@@ -5,11 +5,7 @@ Feature: Register in application
 	
   Scenario: Register with password and password confirmation different
    	Given I am at the register page
-
-		And i insert "1234@mail.com" in the email field
-
-		And i insert "1234" in the password field
-
-		And i insert "12341234" in the password confirmation field
-
-		Then i click in the "REGISTER (1)" button
+		And I insert "1234@mail.com" in the "Email Register" field
+		And I insert "1234" in the "Password Register" field
+		And I insert "12341234" in the "Password Confirmation" field
+		Then I click in the "Register Register" button

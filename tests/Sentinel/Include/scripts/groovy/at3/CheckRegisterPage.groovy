@@ -49,45 +49,18 @@ import cucumber.api.java.en.When
 
 class CheckRegisterPage {
 	@Given("I am at the register page")
-	def Check_Dashboard_Page() {
-		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
-				true)
-		Mobile.tap(findTestObject('at3/android.widget.Button0 - REGISTER'), 0)
-	}
+	 def Check_Dashboard_Page() {
+		 Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',true)
+		 Mobile.tap(findTestObject('Button - Register Dashboard'), 0)
+	 }
+	 
+	 @And("I can see if the {string} field exists")
+	 def email_field_exists(String string) {
+		 Mobile.verifyElementExist(findTestObject('EditText - '+string), 0)
+	 }
 
-	@And("I click the {string} button")
-	def I_click_the_register_button_dashboard(String name) {
-		Mobile.tap(findTestObject('at3/android.widget.Button0 - ' + name), 0)
-	}
-
-	@Then("I return back to the dashboard")
-	def I_return_back_to_the_dashboard() {
-		Mobile.closeApplication()
-	}
-
-	@And("i can see if the email field exists")
-	def email_field_exists() {
-		Mobile.verifyElementExist(findTestObject('at3/android.widget.EditText0'), 0)
-	}
-
-	@And("i can see if password confirmation field exists")
-	def password_confirmation_field_exists() {
-		Mobile.verifyElementExist(findTestObject('at3/android.widget.EditText0 (2)'), 0)
-	}
-
-	@And("i can see if the password field exists")
-	def password_field_exists() {
-		Mobile.verifyElementExist(findTestObject('at3/android.widget.EditText0 (1)'), 0)
-	}
-
-	@And("i can see if register button exists")
-	def register_button_exists() {
-		Mobile.verifyElementExist(findTestObject('at3/android.widget.Button0 - REGISTER (1)'), 0)
-	}
-
-	@Then("i can see if the cancel button exists")
-	def cancel_button_exists() {
-		Mobile.verifyElementExist(findTestObject('at3/android.widget.Button0 - CANCELAR'), 0)
-		Mobile.closeApplication()
-	}
+	 @Then("I can see if the {string} button exists")
+	 def cancel_button_exists(String string) {
+		 Mobile.verifyElementExist(findTestObject('Button - ' + string), 0)
+	 }
 }
