@@ -1,5 +1,7 @@
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Dashboard authenticated user
+  As a authenticated user
+	When I finished the authentication
+	So i can see the authenticated dashboard
 
 
   Scenario: Dashboard fields exists
