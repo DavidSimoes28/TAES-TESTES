@@ -1,4 +1,4 @@
-package at4
+package at8
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,40 +47,13 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class CheckDashboardAuth {
-	@Given("I am at the Dashboard Authenticated")
-	def at_dashboard_auth() {
-		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',true)
-		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
-		Mobile.setText(findTestObject('EditText - Email Login'), '123@mail.com', 0)
-		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
-		Mobile.tapAndHold(findTestObject('Button - Login Login'), 0, 0)
+class ClickCancelButton {
+	/**
+	 * The step definitions below match with Katalon sample Gherkin steps
+	 */
+	@Given("I click the {string} button for at8")
+	def I_click_at8_button(String name) {
+		Mobile.tapAndHold(findTestObject('at8/android.widget.Button0 - '+name), 0, 0)
 	}
 
-	@When("I can see if the {string} text exists")
-	def text_exists(String string) {
-		Mobile.tap(findTestObject('TextView - '+string), 0)
-	}
-
-	@And("I can see if the {string} dropdown exists")
-	def dropdown_exists(String string) {
-		Mobile.verifyElementExist(findTestObject('CheckedTextView - '+string), 0)
-	}
-
-	@When("I want to change the sensor")
-	def change_sensor() {
-		Mobile.tap(findTestObject('TextView - Global Dashboard Auth'), 0)
-		Mobile.tap(findTestObject('TextView - Temperature Dashboard Auth'), 0)
-		Mobile.tap(findTestObject('TextView - Humidity Dashboard Auth'), 0)
-
-		Mobile.tap(findTestObject('CheckedTextView - Dashboard Auth'), 0)
-		Mobile.tapAndHold(findTestObject('CheckedTextView - Sala 2'), 0, 0)
-	}
-
-	@Then("The values update")
-	def verify_change() {
-		Mobile.verifyNotEqual(findTestObject('TextView - Change'), findTestObject('TextView - Global Dashboard Auth'))
-		Mobile.verifyNotEqual(findTestObject('TextView - Change Temp'), findTestObject('TextView - Temperature Dashboard Auth'))
-		Mobile.verifyNotEqual(findTestObject('TextView - Change Hum'), findTestObject('TextView - Humidity Dashboard Auth'))
-	}
 }

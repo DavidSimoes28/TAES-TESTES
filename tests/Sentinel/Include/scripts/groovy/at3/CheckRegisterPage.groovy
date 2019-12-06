@@ -49,18 +49,18 @@ import cucumber.api.java.en.When
 
 class CheckRegisterPage {
 	@Given("I am at the register page")
-	 def Check_Dashboard_Page() {
-		 Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',true)
-		 Mobile.tap(findTestObject('Button - Register Dashboard'), 0)
-	 }
-	 
-	 @And("I can see if the {string} field exists")
-	 def email_field_exists(String string) {
-		 Mobile.verifyElementExist(findTestObject('EditText - '+string), 0)
-	 }
+	def Check_Dashboard_Page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',true)
+		Mobile.tap(findTestObject('Button - Register Dashboard'), 0)
+	}
 
-	 @Then("I can see if the {string} button exists")
-	 def cancel_button_exists(String string) {
-		 Mobile.verifyElementExist(findTestObject('Button - ' + string), 0)
-	 }
+	@And("I can see if the {string} field exists")
+	def email_field_exists(String string) {
+		Mobile.verifyElementExist(findTestObject('EditText - '+string), 0)
+	}
+
+	@Then("I can see if the {string} button exists")
+	def cancel_button_exists(String string) {
+		Mobile.verifyElementExist(findTestObject('Button - ' + string), 0)
+	}
 }
