@@ -5,5 +5,5 @@ Feature: Register in application
 
   Scenario: Button cancel in register
     Given I am at the register page
-		And I click in the "CANCELAR" button
-		Then I am at the dashboard
+		And I click in the "Cancelar Register" button
+		Then I return back to the dashboard
