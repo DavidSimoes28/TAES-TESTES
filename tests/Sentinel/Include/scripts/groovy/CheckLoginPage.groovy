@@ -69,6 +69,7 @@ class CheckLoginPage {
 
 	@Then("I return back to the dashboard")
 	def I_return_back_to_the_dashboard() {
-		Mobile.closeApplication()
+		Mobile.verifyElementExist(findTestObject('ViewGroup - Dashboard Guest'), 0)
+		//Mobile.closeApplication()
 	}
 }
