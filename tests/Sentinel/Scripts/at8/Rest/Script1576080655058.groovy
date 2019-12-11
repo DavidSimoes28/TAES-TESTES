@@ -15,26 +15,28 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', 
-    true)
+response1 = WS.sendRequest(findTestObject('SendRest/SendRest'))
 
-Mobile.tap(findTestObject('at8/android.widget.Button0 - LOGIN (8)'), 0)
+def slurper = new groovy.json.JsonSlurper()
 
-Mobile.setText(findTestObject('at8/android.widget.EditText0 (11)'), '123@mail.com', 0)
+def result = slurper.parseText(response1.getResponseBodyContent())
 
-Mobile.setText(findTestObject('at8/android.widget.EditText0 (12)'), '123123', 0)
+def value = result.Sensor1.valores
+println(value.getClass().getSimpleName())
+GlobalVariable.valores = value
 
-Mobile.tapAndHold(findTestObject('at8/android.widget.Button0 - LOGIN (9)'), 0, 0)
+boolean existe = false;
+for (def index : GlobalVariable.valores) {
+	println(index)
+	//def nome = LazyMap().put("123",index)
+	//println(nome)
+	//def res = slurper.parseText(index.toString())
+	//println(index.valores1.humidade)
 
-Mobile.tap(findTestObject('at8/android.widget.Button0 - SEND (6)'), 0)
+}
 
-Mobile.setText(findTestObject('at8/android.widget.EditText0 (13)'), 'Sala A1.2A', 0)
-
-Mobile.setText(findTestObject('at8/android.widget.EditText0 (14)'), '20', 0)
-
-Mobile.setText(findTestObject('at8/android.widget.EditText0 (15)'), '50', 0)
-
-Mobile.tapAndHold(findTestObject('at8/android.widget.Button0 - SEND (7)'), 0, 0)
-
-Mobile.closeApplication()
-
+if(existe){
+   println("Favorito encontrado")
+}else{
+   println("Favorito não encontrado")
+}

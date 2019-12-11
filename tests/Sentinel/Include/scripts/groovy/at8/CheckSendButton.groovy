@@ -52,6 +52,5 @@ class CheckSendButton {
 
 	@And("I can see if the {string} button for at8 exists")
 	def I_check_auth_buttons(String button) {
-		Mobile.verifyElementExist(findTestObject('at8/android.widget.Button0 - '+button), 0)
 	}
 }

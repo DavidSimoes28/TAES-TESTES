@@ -5,6 +5,7 @@ Feature: Send page exists
   Scenario: Send Page Exists
 	Given I am at the send page
 	
+	And I can if the 
 	And I can see if the temperatura, humidade and temperatura field exists
 	
 	And I can see if the "SEND (2)" button for at8 exists

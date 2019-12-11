@@ -5,5 +5,5 @@ Feature: Send Button exists
 
   Scenario: Send Button exists
 				Given I am at the Dashboard Authenticated
-				And I can see if the "SEND" button for at8 exists
+				And I can see if the "Send Dashboard Auth" button exists
 				Then I return back to the dashboard
