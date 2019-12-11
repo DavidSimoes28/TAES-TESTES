@@ -1,3 +1,4 @@
+package at7
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -46,30 +47,23 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class CheckLoginPage {
-	/**
-	 * The step definitions below match with Katalon sample Gherkin steps
-	 */
-	@Given("I am at the dashboard")
-	def Check_Dashboard_Page() {
-		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
-				true)
-	}
+class verifyOnFirebase {
 
-	@When("I click in the {string} button")
-	def I_click_the_login_button_dashboard(String name) {
-		Mobile.tapAndHold(findTestObject('Button - ' + name), 0, 0)
-	}
-
-	@Then("I am at the {string}")
-	def Check_Login_Page(String string) {
-		Mobile.verifyElementExist(findTestObject('FrameLayout - ' + string), 0)
-		Mobile.closeApplication()
-	}
-
-	@Then("I return back to the dashboard")
-	def I_return_back_to_the_dashboard() {
-		Mobile.verifyElementExist(findTestObject('ViewGroup - Dashboard Guest'), 0)
-		//Mobile.closeApplication()
+	@Then("I verify if the favorite is on database")
+	def I_verify_on_firebase() {
+		/*response1 = WS.sendRequest(findTestObject('rest/ListUsers'))
+		def slurper = new groovy.json.JsonSlurper()
+		def result = slurper.parseText(response1.getResponseBodyContent())
+		def value = result.User1.favoritos
+		println(value)
+		GlobalVariable.favoritos = value
+		boolean existe = false;
+		for (def index : GlobalVariable.favoritos) {
+			if(index.equals("Sala A1.2A")){
+				existe = true;
+			}
+		}
+		return existe;
+		*/
 	}
 }
