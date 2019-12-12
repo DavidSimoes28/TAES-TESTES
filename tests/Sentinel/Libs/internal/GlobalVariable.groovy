@@ -9,11 +9,6 @@ import com.kms.katalon.core.main.TestCaseMain
  */
 public class GlobalVariable {
      
-    /**
-     * <p></p>
-     */
-    public static Object favoritos
-     
 
     static {
         try {
@@ -21,7 +16,6 @@ public class GlobalVariable {
 			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
             selectedVariables += RunConfiguration.getOverridingParameters()
     
-            favoritos = selectedVariables['favoritos']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)
