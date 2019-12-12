@@ -58,7 +58,7 @@ class CheckLoginPage {
 
 	@When("I click in the {string} button")
 	def I_click_the_login_button_dashboard(String name) {
-		Mobile.tap(findTestObject('Button - ' + name), 0)
+		Mobile.tapAndHold(findTestObject('Button - ' + name), 0, 0)
 	}
 
 	@Then("I am at the {string}")
@@ -69,6 +69,7 @@ class CheckLoginPage {
 
 	@Then("I return back to the dashboard")
 	def I_return_back_to_the_dashboard() {
-		Mobile.closeApplication()
+		Mobile.verifyElementExist(findTestObject('ViewGroup - Dashboard Guest'), 0)
+		//Mobile.closeApplication()
 	}
 }
