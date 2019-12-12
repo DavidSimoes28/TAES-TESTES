@@ -6,6 +6,6 @@ Feature: Check Cancel Button
 Scenario: Check Cancel Button
 Given I am at the send page
 
-And I click the "CANCEL (1)" button for at8
+And I click in the "Send Cancel" button
 
 Then I return back to the dashboard

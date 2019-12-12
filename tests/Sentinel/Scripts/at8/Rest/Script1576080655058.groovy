@@ -22,12 +22,31 @@ def slurper = new groovy.json.JsonSlurper()
 def result = slurper.parseText(response1.getResponseBodyContent())
 
 def value = result.Sensor1.valores
-println(value.getClass().getSimpleName())
+
 GlobalVariable.valores = value
 
 boolean existe = false;
 for (def index : GlobalVariable.valores) {
-	println(index)
+	println(index.toString().replace("{","").replace("}",""))
+	String nome = index.toString().replace("{","").replace("}","")
+	String[] v = nome.split(",")
+	println(v[0])
+	//String[] vdata = v[0].split("=")
+	//println(vdata[2])
+	
+	String[] vhum = v[1].split("=")
+	//println(vhum[1])
+	
+	String[] vtemp = v[2].split("=")
+	//println(vtemp[1])
+
+	if( vhum[1].equals("50") &&
+		vtemp[1].equals("40") ){
+		existe = true
+		
+	}
+	
+	//valores1=data=11/9/2018 22:00:00, humidade=40, temperatura=16
 	//def nome = LazyMap().put("123",index)
 	//println(nome)
 	//def res = slurper.parseText(index.toString())
@@ -36,7 +55,7 @@ for (def index : GlobalVariable.valores) {
 }
 
 if(existe){
-   println("Favorito encontrado")
+   println("Registo encontrado")
 }else{
-   println("Favorito não encontrado")
+   println("Registo não encontrado")
 }

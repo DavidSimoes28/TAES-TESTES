@@ -28,19 +28,9 @@ Mobile.tapAndHold(findTestObject('Button - Login Login'), 0, 0)
 
 Mobile.tapAndHold(findTestObject('Button - Send Dashboard Auth'), 0, 0)
 
-Mobile.verifyElementExist(findTestObject('at8/android.widget.TextView0 - REGISTER'), 0)
+Mobile.tap(findTestObject('button - Send Cancel'), 0)
 
-Mobile.verifyElementExist(findTestObject('at8/android.widget.CheckedTextView0 - Sala A1.2A'), 0)
-
-Mobile.verifyElementExist(findTestObject('EditText - Temperature'), 0)
-
-Mobile.verifyElementExist(findTestObject('EditText - Humidade'), 0)
-
-Mobile.verifyElementExist(findTestObject('button - Send Send'), 0)
-
-Mobile.verifyElementExist(findTestObject('Button - Cancel Send'), 0)
-
-Mobile.verifyElementExist(findTestObject('at8/android.view.ViewGroup0'), 0)
+Mobile.verifyElementExist(findTestObject('at8/android.widget.FrameLayout0'), 0)
 
 Mobile.closeApplication()
 

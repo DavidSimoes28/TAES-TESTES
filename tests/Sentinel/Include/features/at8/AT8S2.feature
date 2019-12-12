@@ -3,14 +3,16 @@ Feature: Send page exists
 			So that i can in the future send sensor data
 
   Scenario: Send Page Exists
+  
 	Given I am at the send page
 	
-	And I can if the 
-	And I can see if the temperatura, humidade and temperatura field exists
+	And I can see if the "Temperature" field exists
 	
-	And I can see if the "SEND (2)" button for at8 exists
+	And I can see if the "Humidade" field exists
 	
-	And I can see if the "CANCEL" button for at8 exists
+	And I can see if the "Send Send" button exists
+	
+	And I can see if the "Send Cancel" button exists
 	
 	Then I return back to the dashboard
 

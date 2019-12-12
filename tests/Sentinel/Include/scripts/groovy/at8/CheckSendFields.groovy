@@ -52,27 +52,29 @@ class CheckSendFields {
 
 	@Given("I am at the send page")
 	def I_am_at_send_page() {
+
 		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
 				true)
 
-		Mobile.tap(findTestObject('at8/android.widget.Button0 - LOGIN (2)'), 0)
+		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
 
-		Mobile.setText(findTestObject('at8/android.widget.EditText0 (2)'), '123@mail.com', 0)
+		Mobile.setText(findTestObject('EditText - Email Login'), '123@mail.com', 0)
 
-		Mobile.setText(findTestObject('at8/android.widget.EditText0 (3)'), '123123', 0)
+		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
 
-		Mobile.tapAndHold(findTestObject('at8/android.widget.Button0 - LOGIN (3)'), 0, 0)
+		Mobile.tapAndHold(findTestObject('Button - Login Login'), 0, 0)
 
-		Mobile.tap(findTestObject('at8/android.widget.Button0 - SEND (1)'), 0)
+		Mobile.tapAndHold(findTestObject('Button - Send Dashboard Auth'), 0, 0)
+
+		Mobile.verifyElementExist(findTestObject('at8/android.widget.TextView0 - REGISTER'), 0)
 	}
-	
+
 	@And("I can see if the temperatura, humidade and temperatura field exists")
 	def Check_all_fields(){
 		Mobile.verifyElementExist(findTestObject('at8/android.widget.EditText0 (4)'), 0)
-		
+
 		Mobile.verifyElementExist(findTestObject('at8/android.widget.EditText0 (5)'), 0)
-		
+
 		Mobile.verifyElementExist(findTestObject('at8/android.widget.EditText0 (6)'), 0)
 	}
-	
 }

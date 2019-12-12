@@ -47,10 +47,11 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class CheckSendButton {
+class SendEmpty {
 
 
-	@And("I can see if the {string} button for at8 exists")
-	def I_check_auth_buttons(String button) {
+	@And("I check if i am at Send Sensor Page")
+	def I_am_at_Send_sensor_page() {
+		Mobile.tap(findTestObject('at8/android.widget.TextView0 - REGISTER (1)'), 0)
 	}
 }
