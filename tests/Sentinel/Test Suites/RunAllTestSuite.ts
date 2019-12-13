@@ -53,9 +53,27 @@
       <testCaseId>Test Cases/Run AT7</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>dcbc433e-cea9-4de2-9bd8-99da55e327aa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Run AT8</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3bba7107-be37-4483-a175-8a11f02b2937</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Run AT10</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>c841c272-efd0-4c6f-9847-ad4feb79b93b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Run AT11</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a7460549-b3cb-446f-b020-56a6de26d5dc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/RunAT12</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
