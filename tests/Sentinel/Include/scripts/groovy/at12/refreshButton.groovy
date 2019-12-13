@@ -1,4 +1,4 @@
-package at1
+package at12
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,13 +47,9 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class IndicatoresNotEmpty {
-	@When("I can see if the {string} text is not empty")
-	def I_check_for_the_value_in_step(String string) {
-		String s ="";
-		s = Mobile.getText(findTestObject('TextView - '+string), 0)
-		if(s.equals("")){
-			return false;
-		}
+class refreshButton {
+	@Then("I see the updated values on {string}")
+	def I_update_values_refresh(String status) {
+		Mobile.verifyElementExist(findTestObject('TextView - '+status), 0)
 	}
 }

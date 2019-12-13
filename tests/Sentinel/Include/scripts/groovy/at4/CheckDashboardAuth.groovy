@@ -50,7 +50,8 @@ import cucumber.api.java.en.When
 class CheckDashboardAuth {
 	@Given("I am at the Dashboard Authenticated")
 	def at_dashboard_auth() {
-		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',true)
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+				true)
 		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
 		Mobile.setText(findTestObject('EditText - Email Login'), '123@mail.com', 0)
 		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
