@@ -1,5 +1,7 @@
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Profile Page
+  As an authenticated user
+	I want to be able to check my profile information and to change my password
+	So that i can login with a different password
 
 
   Scenario: Check if all fields exist
