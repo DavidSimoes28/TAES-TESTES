@@ -30,7 +30,5 @@ Mobile.tapAndHold(findTestObject('Button - Send Dashboard Auth'), 0, 0)
 
 Mobile.tapAndHold(findTestObject('button - Send Send'), 0, 0)
 
-Mobile.tap(findTestObject('at8/android.widget.TextView0 - REGISTER (1)'), 0)
-
 Mobile.closeApplication()
 

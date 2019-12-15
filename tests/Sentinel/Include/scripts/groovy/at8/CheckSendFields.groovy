@@ -69,12 +69,4 @@ class CheckSendFields {
 		Mobile.verifyElementExist(findTestObject('at8/android.widget.TextView0 - REGISTER'), 0)
 	}
 
-	@And("I can see if the temperatura, humidade and temperatura field exists")
-	def Check_all_fields(){
-		Mobile.verifyElementExist(findTestObject('at8/android.widget.EditText0 (4)'), 0)
-
-		Mobile.verifyElementExist(findTestObject('at8/android.widget.EditText0 (5)'), 0)
-
-		Mobile.verifyElementExist(findTestObject('at8/android.widget.EditText0 (6)'), 0)
-	}
 }
