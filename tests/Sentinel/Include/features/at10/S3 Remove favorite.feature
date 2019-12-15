@@ -6,5 +6,5 @@ Feature: Favorites Page
   Scenario: Remove favotire
   	Given I am at the Favorites Page
 		And I click the "Favorite" item of the List
-		And I click "Sim" in the popup
+		And I click "Sim Popup" in the popup
 		Then The favorite is removed

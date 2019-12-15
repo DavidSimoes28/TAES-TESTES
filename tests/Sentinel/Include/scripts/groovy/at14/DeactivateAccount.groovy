@@ -1,4 +1,4 @@
-package at10
+package at14
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,24 +47,36 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class DontRemoveFavotire {
-	@And("I click the {string} item of the List")
-	def click_list_item(String name) {
-		Mobile.tap(findTestObject('ListTextView - '+name), 0)
+class DeactivateAccount {
+	/**
+	 * The step definitions below match with Katalon sample Gherkin steps
+	 */
+	@Given("I am at the Profile Page with user {string}")
+	def profile_page_deactivate(String email) {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', true)
+
+		Mobile.tapAndHold(findTestObject('Button - Dashboard Login'), 0, 0)
+
+		Mobile.setText(findTestObject('EditText - Email Login'), email, 0)
+
+		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
+
+		Mobile.tapAndHold(findTestObject('Button - Login Login'), 0, 0)
+
+		Mobile.switchToPortrait()
+
+		Mobile.tap(findTestObject('Button - Profile Dashboard Auth'), 0)
 	}
 
-	@And("I click {string} in the popup")
-	def choose_popup(String string) {
-		Mobile.tap(findTestObject('Button - ' + string), 0)
+	@When("I return back to the Dashboard to login")
+	def try_to_login_page() {
+		Mobile.tapAndHold(findTestObject('Button - Dashboard Login'), 0, 0)
 	}
 
-	@Then("The favorite is not removed")
-	def favorite_not_removed() {
-		Mobile.verifyElementExist(findTestObject('ListTextView - Favorite'), 0)
-	}
-	
-	@Then("The favorite is removed")
-	def favorite_removed() {
-		Mobile.verifyElementNotExist(findTestObject('ListTextView - Favorite'), 0)
+	@Then("I can't login")
+	def I_verify_the_status_in_step() {
+		Mobile.setText(findTestObject('EditText - Email Login'), '1234@mail.com', 0)
+		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
+		Mobile.tapAndHold(findTestObject('Button - Login Login'), 0, 0)
 	}
 }
