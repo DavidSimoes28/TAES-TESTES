@@ -6,5 +6,5 @@ Feature: Favorites Page
   Scenario: Don't remove favotire
   	Given I am at the Favorites Page
 		And I click the "Favorite" item of the List
-		And I click "No" in the popup
+		And I click "No Popup" in the popup
 		Then The favorite is not removed
