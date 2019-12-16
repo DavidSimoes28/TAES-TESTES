@@ -1,4 +1,4 @@
-package at1
+package at10
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,13 +47,24 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class IndicatoresNotEmpty {
-	@When("I can see if the {string} text is not empty")
-	def I_check_for_the_value_in_step(String string) {
-		String s ="";
-		s = Mobile.getText(findTestObject('TextView - '+string), 0)
-		if(s.equals("")){
-			return false;
-		}
+class DontRemoveFavotire {
+	@And("I click the {string} item of the List")
+	def click_list_item(String name) {
+		Mobile.tap(findTestObject('ListTextView - '+name), 0)
+	}
+
+	@And("I click {string} in the popup")
+	def choose_popup(String string) {
+		Mobile.tap(findTestObject('Button - ' + string + ' Popup'), 0)
+	}
+
+	@Then("The favorite is not removed")
+	def favorite_not_removed() {
+		Mobile.verifyElementExist(findTestObject('ListTextView - Favorite'), 0)
+	}
+
+	@Then("The favorite is removed")
+	def favorite_removed() {
+		Mobile.verifyElementNotExist(findTestObject('ListTextView - Favorite'), 0)
 	}
 }

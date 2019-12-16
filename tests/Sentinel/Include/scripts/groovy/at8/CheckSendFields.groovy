@@ -53,7 +53,7 @@ class CheckSendFields {
 	@Given("I am at the send page")
 	def I_am_at_send_page() {
 
-		Mobile.startApplication('C:\\Users\\mathe\\Desktop\\Escola\\Ano3S1\\ProjAtv\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
 				true)
 
 		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
@@ -68,5 +68,4 @@ class CheckSendFields {
 
 		Mobile.verifyElementExist(findTestObject('at8/android.widget.TextView0 - REGISTER'), 0)
 	}
-
 }

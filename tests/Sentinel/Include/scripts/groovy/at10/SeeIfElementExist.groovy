@@ -1,4 +1,4 @@
-package at1
+package at10
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,13 +47,21 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class IndicatoresNotEmpty {
-	@When("I can see if the {string} text is not empty")
-	def I_check_for_the_value_in_step(String string) {
-		String s ="";
-		s = Mobile.getText(findTestObject('TextView - '+string), 0)
-		if(s.equals("")){
-			return false;
-		}
+class SeeIfElementExist {
+
+	@Given("I am at the Favorites Page")
+	def favorites_page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+				true)
+		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
+		Mobile.setText(findTestObject('EditText - Email Login'), '123@mail.com', 0)
+		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
+		Mobile.tap(findTestObject('Button - Login Login'), 0)
+		Mobile.tapAndHold(findTestObject('Button - Favorite Dashboard Auth'), 0, 0)
+	}
+
+	@Then("I check if the {string} List Exists")
+	def I_verify_the_status_in_step(String status) {
+		Mobile.verifyElementExist(findTestObject('ListView - '+status), 0)
 	}
 }

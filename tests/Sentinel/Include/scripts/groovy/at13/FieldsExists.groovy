@@ -1,4 +1,4 @@
-package at1
+package at13
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -47,13 +47,24 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class IndicatoresNotEmpty {
-	@When("I can see if the {string} text is not empty")
-	def I_check_for_the_value_in_step(String string) {
-		String s ="";
-		s = Mobile.getText(findTestObject('TextView - '+string), 0)
-		if(s.equals("")){
-			return false;
-		}
+class FieldsExists {
+	/**
+	 * The step definitions below match with Katalon sample Gherkin steps
+	 */
+	@Given("I am at the Profile Page")
+	def I_am_at_the_Profile_Page() {
+		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk', true)
+		
+		Mobile.tapAndHold(findTestObject('Button - Dashboard Login'), 0, 0)
+		
+		Mobile.setText(findTestObject('EditText - Email Login'), '123@mail.com', 0)
+		
+		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)
+		
+		Mobile.tapAndHold(findTestObject('Button - Login Login'), 0, 0)
+		
+		Mobile.switchToPortrait()
+		
+		Mobile.tapAndHold(findTestObject('Button - Profile Dashboard Auth'), 0, 0)
 	}
 }
