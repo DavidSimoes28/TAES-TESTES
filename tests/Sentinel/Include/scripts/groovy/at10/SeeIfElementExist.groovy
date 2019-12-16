@@ -52,7 +52,7 @@ class SeeIfElementExist {
 	@Given("I am at the Favorites Page")
 	def favorites_page() {
 		Mobile.startApplication('C:\\Users\\david\\Desktop\\TAES\\Projeto\\Sentinel\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
-			true)
+				true)
 		Mobile.tap(findTestObject('Button - Dashboard Login'), 0)
 		Mobile.setText(findTestObject('EditText - Email Login'), '123@mail.com', 0)
 		Mobile.setText(findTestObject('EditText - Password Login'), '123123', 0)

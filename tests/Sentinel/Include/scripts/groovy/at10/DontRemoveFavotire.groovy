@@ -62,7 +62,7 @@ class DontRemoveFavotire {
 	def favorite_not_removed() {
 		Mobile.verifyElementExist(findTestObject('ListTextView - Favorite'), 0)
 	}
-	
+
 	@Then("The favorite is removed")
 	def favorite_removed() {
 		Mobile.verifyElementNotExist(findTestObject('ListTextView - Favorite'), 0)
